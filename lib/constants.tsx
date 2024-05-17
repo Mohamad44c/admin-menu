@@ -1,11 +1,6 @@
-import { LayoutDashboard, Shapes, Tag } from "lucide-react";
+import { Settings, Shapes, Tag } from "lucide-react";
 
 export const navLinks = [
-  {
-    url: "/",
-    icon: <LayoutDashboard />,
-    label: "Dashboard",
-  },
   {
     url: "/products",
     icon: <Tag />,
@@ -15,5 +10,10 @@ export const navLinks = [
     url: "/categories",
     icon: <Shapes />,
     label: "Categories",
+  },
+  {
+    url: "/settings",
+    icon: <Settings />,
+    label: "Settings",
   },
 ];

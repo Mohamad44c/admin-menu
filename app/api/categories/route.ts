@@ -27,11 +27,20 @@ export const POST = async (req: NextRequest) => {
     });
 
     await newCategory.save();
-      return NextResponse.json(newCategory, { status: 200 });
-      
-      
+    return NextResponse.json(newCategory, { status: 200 });
   } catch (error) {
     console.log("[category_POST]", error);
     return new NextResponse("Internal Server Error", { status: 500 });
+  }
+};
+
+export const GET = async (req: NextResponse) => {
+  try {
+    await connectToDB();
+    const categories = await Category.find().sort({ createdAt: "desc" });
+
+    return NextResponse.json(categories, { status: 200 });
+  } catch (error) {
+    console.log("[category_GET]", error);
   }
 };
