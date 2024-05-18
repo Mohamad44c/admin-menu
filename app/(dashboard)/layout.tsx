@@ -5,7 +5,7 @@ import "../globals.css";
 
 import LeftSideBar from "@/components/layout/LeftSideBar";
 import TopBar from "@/components/layout/TopBar";
-// import { ToasterProvider } from "@/lib/ToasterProvider";
+import { ToasterProvider } from "@/lib/ToasterProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          {/* <ToasterProvider /> */}
+          <ToasterProvider />
           <div className="flex max-lg:flex-col text-grey-1">
             <LeftSideBar />
             <TopBar />

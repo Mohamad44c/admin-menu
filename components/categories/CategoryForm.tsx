@@ -57,7 +57,7 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ initialData }) => {
       });
       if (res.ok) {
         setLoading(false);
-        // toast.success(`Category ${initialData ? "updated" : "created"}`);
+        toast.success(`Category ${initialData ? "updated" : "created"}`);
         console.log("Category created");
         window.location.href = "/categories";
         router.push("/categories");
@@ -65,7 +65,7 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ initialData }) => {
     } catch (error) {
       console.log("[CategoryForm_POST]", error);
       console.log("Category not created");
-      // toast.error("Something went wrong! Please try again");
+      toast.error("Something went wrong! Please try again");
     }
     console.log(values);
   };
